@@ -9,28 +9,24 @@
 int main(void)
 
 {
-	int ones = '0';
-	int tens = '0';
-
-	for (tens = '0'; tens <= '9'; tens++)
+	for (int i = 0; i < 10; i++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (int j = 0; j < 10; j++)
 		{
-			if  (!((ones == tens) || (tens > ones)))
+			if (i < j) continue;
+
+
+			if (i < j) 
 			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '9' && tens == '8'))
-				{
-					putchar(',');
-					putchar(' ')
-				}
+				putchar(i + '0');
+				putchar(',');
+				putchar(' ');
+				putchar(j + '0');
 			}
 		}
 	}
 
 	putchar('\n');
-
 
 	return (0);
 }
