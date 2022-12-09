@@ -1,37 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdilb.h>
 
 /**
  * main - return a combination of number
  * Return: return 0 if successfull
  */
 
-int main(void)
+int main (void)
 {
-	int i, j;
-
-	for (i = 0; i < 100; i++)
+	 for (int i = 0; i <= 99; i++)
 	{
-		fro(j = 0; j < 100; j++)
-		{
-			if (i < j)
-			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) 48);
-				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 99);
-				if (i != 98 || j != 99)
-				{
-					putchar(',')
-					putchar(' ')
-				}
-			}
-		}
+		putchar('0' + i / 10);
+		putchar('0' + i % 10);
+		putchar(' ');
+
+
+	for (int j = 0; j <= 99; j++)
+	{
+		putchar('0' + j / 10);
+		putchar('0' + j % 10);
+		putchar(',');
+		putchar(' ');
 	}
 
-	putchar('\n');
 
-	return (0);
+	 putchar('\n');
+	}
+	 return (0);
 }
 
