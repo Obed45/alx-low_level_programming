@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+    int i, j, product, max_palindrome = 0;
+    
+    for (i = 100; i <= 999; i++) {
+        for (j = 100; j <= 999; j++) {
+            product = i * j;
+            int n = product;
+            int reverse = 0;
+            
+            // reverse the product
+            while (n != 0) {
+                reverse = reverse * 10 + n % 10;
+                n /= 10;
+            }
+            
+            // check if the product is a palindrome and update max_palindrome if necessary
+            if (product == reverse && product > max_palindrome) {
+                max_palindrome = product;
+            }
+        }
+    }
+    
+    printf("%d", max_palindrome);
+    return 0;
+}
